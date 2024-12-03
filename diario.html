@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar y Yuritzi - Diario</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/diario.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">O&Y</div>
+        <div class="nav-links">
+            <a href="home.html">Inicio</a>
+            <a href="recuerdos.html">Recuerdos</a>
+            <a href="poemas.html">Poemas</a>
+            <a href="diario.html" class="active">Diario</a>
+            <button id="logoutBtn">Cerrar Sesión</button>
+        </div>
+    </nav>
+    <main>
+        <h1>Nuestro Diario</h1>
+        <div class="diario-container">
+            <div class="nueva-entrada">
+                <input type="text" id="tituloDiario" placeholder="Título de la entrada...">
+                <textarea id="contenidoDiario" placeholder="Escribe sobre nuestro amor..."></textarea>
+                <button id="guardarEntrada">Guardar en Nuestro Diario</button>
+            </div>
+            <div id="entradasDiario" class="entradas-lista"></div>
+        </div>
+    </main>
+    <script type="module" src="/js/firebase-config.js"></script>
+    <script type="module" src="/js/diario.js"></script>
+</body>
+</html>

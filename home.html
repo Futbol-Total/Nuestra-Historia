@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar y Yuritzi - Inicio</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">O&Y</div>
+        <div class="nav-links">
+            <a href="home.html" class="active">Inicio</a>
+            <a href="recuerdos.html">Recuerdos</a>
+            <a href="poemas.html">Poemas</a>
+            <a href="diario.html">Diario</a>
+            <button id="logoutBtn">Cerrar Sesión</button>
+        </div>
+    </nav>
+    <main>
+        <section class="hero">
+            <h1>Nuestro Amor</h1>
+            <div class="floating-hearts"></div>
+        </section>
+        <section class="mensajes">
+            <h2>Mensajes de Amor</h2>
+            <div class="mensaje-form">
+                <textarea id="nuevoMensaje" placeholder="Escribe un mensaje de amor..."></textarea>
+                <button id="enviarMensaje">Enviar</button>
+            </div>
+            <div id="mensajesContainer" class="mensajes-container"></div>
+        </section>
+    </main>
+    <script type="module" src="/js/firebase-config.js"></script>
+    <script type="module" src="/js/home.js"></script>
+</body>
+</html>
