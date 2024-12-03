@@ -1,8 +1,8 @@
-import { auth } from './firebase-config.js';
+import { auth } from 'firebase-config.js';
 import { onSnapshot } from 'firebase/firestore';
-import { createMessage, getMensajesQuery } from './utils/database.js';
-import { logoutUser } from './utils/auth.js';
-import { getUserName } from './utils/users.js';
+import { createMessage, getMensajesQuery } from 'utils/database.js';
+import { logoutUser } from 'utils/auth.js';
+import { getUserName } from 'utils/users.js';
 
 const mensajesContainer = document.getElementById('mensajesContainer');
 const nuevoMensaje = document.getElementById('nuevoMensaje');
@@ -42,7 +42,7 @@ enviarMensaje.addEventListener('click', async () => {
 logoutBtn.addEventListener('click', async () => {
     const result = await logoutUser();
     if (result.success) {
-        window.location.href = '/index.html';
+        window.location.href = 'index.html';
     } else {
         console.error('Error al cerrar sesión:', result.error);
     }

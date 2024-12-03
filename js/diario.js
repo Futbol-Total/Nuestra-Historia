@@ -1,7 +1,7 @@
-import { auth, db } from './firebase-config.js';
+import { auth, db } from 'firebase-config.js';
 import { collection, addDoc, onSnapshot, query, orderBy, serverTimestamp } from 'firebase/firestore';
-import { logoutUser } from './utils/auth.js';
-import { getUserName } from './utils/users.js';
+import { logoutUser } from 'utils/auth.js';
+import { getUserName } from 'utils/users.js';
 
 const entradasContainer = document.getElementById('entradasDiario');
 const tituloDiario = document.getElementById('tituloDiario');
@@ -46,6 +46,6 @@ guardarEntrada.addEventListener('click', async () => {
 logoutBtn.addEventListener('click', async () => {
     const result = await logoutUser();
     if (result.success) {
-        window.location.href = '/index.html';
+        window.location.href = 'index.html';
     }
 });
